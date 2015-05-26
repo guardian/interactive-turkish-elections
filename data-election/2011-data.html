@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fonts.css">
+    </head>
+    <body>
+
+        
+
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/underscore.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script>
+        var data;
+        $.getJSON('data/2011-data.json',function(json,err){
+        	console.log(json);
+        	data = json.map(function(district){
+        		var totalmps = 0;
+        		var results = district.results.map(function(result){
+        			totalmps += result["toplamoystil_content_numbers"];
+        			return {
+        				party: result["tr_link/_text"],
+        				percentage: result["yuzdestil_number"],
+        				votes: result["toplamoystil_number"],
+        				mps: result["toplamoystil_content_numbers"]
+        			}
+        		})
+
+        		return {
+        			district: district.query,
+        			results: results,
+        			totalmps: totalmps
+        		}
+        	})
+        	analyzeData();
+        })
+
+        function analyzeData(){
+            var otherwinners;
+            var ss = 0;
+        	data.forEach(function(district){
+        		var numbers = [];
+        		for(i=0;i<10;i++){
+        			var totalvotes = district.results[i].votes;
+        			numbers.push({
+        				name: district.results[i].party,
+        				amount:totalvotes,
+        				mps: district.results[i].mps,
+        				district:district.district
+        			})
+        			for(j=2;j<district.totalmps;j++){
+        				var divided = totalvotes/j;
+        				numbers.push({
+        					name: district.results[i].party,
+        					amount:divided,
+        					mps: district.results[i].mps,
+        					district:district.district
+        				})
+        			}
+        		}
+        		var numbersSorted = _.sortBy(numbers,'amount').reverse();
+        		var topNumbers = [];
+        		for(i=0;i<district.totalmps;i++){
+        			topNumbers.push(numbersSorted[i])
+        		}
+        		var winners = _.groupBy(topNumbers,"name");
+        		// console.log(winners);
+
+        		_.each(winners,function(i,partyname){
+        			// console.log(partyname);
+                    
+        			if(partyname === "AKP" || partyname === "CHP" || partyname ==="MHP"){
+
+        			}else{
+                        ss++;
+        				console.log(ss);
+        			}
+        		})
+        	})
+        }
+        </script>
+    </body>
+</html>

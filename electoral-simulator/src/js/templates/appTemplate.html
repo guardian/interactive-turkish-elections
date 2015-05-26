@@ -1,0 +1,47 @@
+<div id="guInteractive">
+<div class="introduction">
+	<h1>How does the Turkish electoral system work?</h1>
+	<p>In the Turkish electoral system a party needs at least 10% of the national vote to enter parliament. This means that if a party wins 40 seats but receives only 9.55% of the national vote, as the DYP did in the 2002 elections, they forfeit those 40 seats and are unrepresented in parliament. The vote is then recounted excluding the votes cast for parties who did not meet the national threshold.</p> 
+	<p>This system is highly beneficial to the larger parties, who often end up with bonus seats that would have been won by smaller parties if the threshold did not exist. Click below to discover how the threshold has affected Turkish elections in the past and to see how this voting system would change the UK, German and Australian parliaments.</p>
+	
+</div>
+<div id="buttonContainer">
+	<!-- <p>Select an election</p> -->
+	<!-- <button class="{{#if currentElection==='hdpmorethan10'}}active{{/if}}" on-click="switchDataset:hdpmorethan10">HDP more than 10</button> -->
+	<!-- <button class="{{#if currentElection==='hdplessthan10'}}active{{/if}}" on-click="switchDataset:hdplessthan10">HDP less than 10</button> -->
+	<button class="{{#if currentElection==='turkey2002'}}active{{/if}}" on-click="switchDataset:turkey2002">Turkish elections 2002</button>
+	<button class="{{#if currentElection==='turkey2011'}}active{{/if}}" on-click="switchDataset:turkey2011">Turkish elections 2011</button>
+	<button class="{{#if currentElection==='uk2015'}}active{{/if}}" on-click="switchDataset:uk2015">British elections 2015</button>
+	<button class="{{#if currentElection==='germany2013'}}active{{/if}}" on-click="switchDataset:germany2013">German elections 2013</button>
+	<button class="{{#if currentElection==='australia2013'}}active{{/if}}" on-click="switchDataset:australia2013">Australian elections 2013</button>
+</div>
+<div id="electionContainer">
+		
+		<div id="electionInfo">
+			{{#each electionData}}
+				{{#if id === currentElection}}
+				<h2>{{name}}</h2>
+				<p>{{description}}</p>
+				<p>10% threshold is <button class="thresholdSwitch threshold-is-{{threshold}}" on-click="switchThreshold">{{#if threshold}}on{{else}}off{{/if}}</button></p>
+				
+				{{/if}}
+			{{/each}}
+		</div>
+		<div id="vizContent" class="{{#if threshold}}threshold-visible{{/if}}">
+			{{#each electionData}}
+				{{#if id === currentElection}}
+				<div id="yAxis">
+				{{#each election_results}}
+					<div class="yLabel {{#if threshold_affect}}belowThreshold{{/if}}">
+						<p>{{party}} <span>{{vote_percentage}}%</span></p>
+					</div>
+				{{/each}}
+				</div>
+				{{/if}}
+			{{/each}}
+			<div id="vizWrapper"></div>
+		</div>
+		
+</div>
+
+</div>

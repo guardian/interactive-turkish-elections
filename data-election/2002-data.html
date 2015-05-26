@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fonts.css">
+    </head>
+    <body>
+
+        
+
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/vendor/underscore.min.js"></script>
+        <script src="js/vendor/d3.min.js"></script>
+        <script>
+        var data = [];
+        d3.csv('data/2002-totalvotes.csv',function(err,votes){
+            console.log(votes)
+            d3.csv('data/2002-totalseats.csv',function(err,seats){
+                _.each(seats,function(region){
+                    var sameRegion = _.findWhere(votes,{"Region":region.Region});
+                    sameRegion.totalmps = region.Votes;
+                    data.push(sameRegion);
+                })
+                doSomething();
+            })
+        })
+
+        function doSomething(){
+            var otherwinners = {};
+            var processedData = data.map(function(a){
+                var results = _.clone(a);
+                delete results.Region;
+                delete results.totalmps;
+                delete results["Valid votes"];
+                delete results["Invalid votes"];
+                delete results["Votes"];
+                delete results["Electorate"];
+                // delete results["ANAP"];
+                // delete results["BBP"];
+                // delete results["DEHAP"];
+                // delete results["DYP"];
+                // delete results["GP"];
+                // delete results["MHP"];
+                // delete results["SP"];
+                // delete results["YP"];
+                // delete results["YTP"];
+                // delete results["ÖDP"];
+                // delete results["DSP"];
+                // var results ={
+                //     AKP: a["AKP"],
+                //     CHP: a["CHP"],
+                //     IND: a["Ind"],
+                // }
+
+                var newResults = [];
+
+                _.each(results,function(result,party){
+                    newResults.push({
+                        party:party,
+                        result:+result
+                    })
+                })
+
+                sortedResults = _.sortBy(newResults,'result').reverse();
+
+                return {
+                    region: a.Region,
+                    totalmps: a.totalmps,
+                    results:sortedResults
+                }
+            })
+            // console.log(processedData);
+            processedData.forEach(function(district){
+                // console.log(district)
+                var numbers = [];
+                console.log(district)
+                for(i=0;i<district.results.length;i++){
+                    var totalvotes = district.results[i].result;
+                    for(j=1;j<=district.totalmps+5;j++){
+                        var divided = totalvotes/j;
+                        if(district.results[i].party !== "IND"){
+                            numbers.push({
+                                party:district.results[i].party,
+                                amount:divided,
+                                district:district.region
+                            })
+                        }
+                    }
+                }
+               var numbersSorted = _.sortBy(numbers,'amount').reverse();
+               var topNumbers = [];
+               for(i=0;i<district.totalmps;i++){
+                    topNumbers.push(numbersSorted[i]);
+               }
+               var winners = _.groupBy(topNumbers,'party');
+               if(winners.IND){
+                console.log(district);
+                console.log(winners);
+               }
+               
+               _.each(winners,function(mps,party){
+                    if(!otherwinners[party]){
+                        otherwinners[party] = mps.length
+                    }else{
+                        otherwinners[party] = otherwinners[party] + mps.length
+                    }
+               })
+               
+            })
+            console.log(otherwinners)
+        }
+        </script>
+    </body>
+</html>

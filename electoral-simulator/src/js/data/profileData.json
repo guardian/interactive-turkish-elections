@@ -1,0 +1,35 @@
+[
+	{	
+		"id"			: "akp",
+		"name"			: "AKP",
+		"translation"	: "Justice and Development Party",
+		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"leader"		: "Ahmet Davutoğlu",
+		"seats"			: 300,
+		"polls"			: 280
+	},{	
+		"id"			: "chp",
+		"name"			: "CHP",
+		"translation"	: "Republican People's Party",
+		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"leader"		: "Kemal Kılıçdaroğlu",
+		"seats"			: 300,
+		"polls"			: 280
+	},{	
+		"id"			: "hdp",
+		"name"			: "HDP",
+		"translation"	: "Peoples' Democratic Party",
+		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"leader"		: "Selahattin Demirtaş",
+		"seats"			: 300,
+		"polls"			: 280
+	},{	
+		"id"			: "mhp",
+		"name"			: "MHP",
+		"translation"	: "Nationalist Movement Party",
+		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"leader"		: "Devlet Bahçeli",
+		"seats"			: 300,
+		"polls"			: 280
+	}
+]

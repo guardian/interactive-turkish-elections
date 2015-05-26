@@ -1,0 +1,22 @@
+<div id="guInteractive">
+{{#each data}}
+	{{#if id === currentParty}}
+		<div id="profileContainer">
+			<div id="infoContainer">
+				<h1>{{name}} <span>{{translation}}</span></h1>
+				<div id="photoContainer">
+					<div id="leaderPhoto" style="background-image:url(@@assetPath@@/imgs/{{id}}_leader.jpg)"></div>
+					<img src="@@assetPath@@/imgs/{{id}}_logo.png" id="partyPhoto"/>
+				</div>
+				
+				<ul>
+					<li>Leader: {{leader}}</li>
+					<li>Vote percentage 2011: {{seats}}</li>
+					<li>Projected vote percentage: {{polls}}</li>
+				</ul>
+				<p>{{description}}</p>
+			</div>
+		</div>
+	{{/if}}
+{{/each}}
+</div>

@@ -1,0 +1,415 @@
+[
+	{
+		"name"			: "Turkish elections 2011",
+		"id"			: "turkey2011",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 550,
+			"max_seats"		: 450,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 276
+				},
+				{
+					"title": "referendum",
+					"seats": 330
+				},{
+					"title": "constitution",
+					"seats": 367
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"AKP",
+				"seats_without_threshold":327,
+				"seats_with_threshold":327,
+				"vote_percentage": 49.83,
+				"threshold_affect": false
+			},{
+				"party":"CHP",
+				"seats_without_threshold":135,
+				"seats_with_threshold":135,
+				"vote_percentage": 25.98,
+				"threshold_affect": false
+			},{
+				"party":"MHP",
+				"seats_without_threshold":53,
+				"seats_with_threshold":53,
+				"vote_percentage": 13.01,
+				"threshold_affect": false
+			},{
+				"party":"IND*",
+				"seats_without_threshold":35,
+				"seats_with_threshold":35,
+				"vote_percentage": 6.57,
+				"threshold_affect": false
+			},{
+				"party":"SP",
+				"seats_without_threshold":0,
+				"seats_with_threshold":0,
+				"vote_percentage": 1.27,
+				"threshold_affect": true
+			},{
+				"party":"HAS",
+				"seats_without_threshold":0,
+				"seats_with_threshold":0,
+				"vote_percentage": 0.77,
+				"threshold_affect": true
+			},{
+				"party":"Rest",
+				"seats_without_threshold":0,
+				"seats_with_threshold":0,
+				"vote_percentage": "~0.23",
+				"threshold_affect": true
+			},
+		]
+	},
+	{
+		"name"			: "Turkish elections 2002",
+		"id"			: "turkey2002",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 550,
+			"max_seats"		: 450,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 276
+				},
+				{
+					"title": "referendum",
+					"seats": 330
+				},{
+					"title": "constitution",
+					"seats": 367
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"AKP",
+				"seats_without_threshold":261,
+				"seats_with_threshold":363,
+				"vote_percentage": 34.28,
+				"threshold_affect": false
+			},{
+				"party":"CHP",
+				"seats_without_threshold":114,
+				"seats_with_threshold":178,
+				"vote_percentage": 19.4,
+				"threshold_affect": false
+			},{
+				"party":"IND*",
+				"seats_without_threshold":4,
+				"seats_with_threshold":9,
+				"vote_percentage": 0.99,
+				"threshold_affect": false
+			},{
+				"party":"DYP",
+				"seats_without_threshold":42,
+				"seats_with_threshold":0,
+				"vote_percentage": 9.55,
+				"threshold_affect": true
+			},{
+				"party":"MHP",
+				"seats_without_threshold":34,
+				"seats_with_threshold":0,
+				"vote_percentage": 8.34,
+				"threshold_affect": true
+			},{
+				"party":"GP",
+				"seats_without_threshold":28,
+				"seats_with_threshold":0,
+				"vote_percentage": 7.25,
+				"threshold_affect": true
+			},{
+				"party":"DEHAP",
+				"seats_without_threshold":51,
+				"seats_with_threshold":0,
+				"vote_percentage": 6.23,
+				"threshold_affect": true
+			},{
+				"party":"ANAP",
+				"seats_without_threshold":10,
+				"seats_with_threshold":0,
+				"vote_percentage": 5.13,
+				"threshold_affect": true
+			},{
+				"party":"Rest",
+				"seats_without_threshold":6,
+				"seats_with_threshold":0,
+				"vote_percentage": "~0.8",
+				"threshold_affect": true
+			}
+		]
+	},{
+		"name"			: "British elections 2015",
+		"id"			: "uk2015",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 650,
+			"max_seats"		: 420,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 326
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"Con",
+				"seats_without_threshold":330,
+				"seats_with_threshold":359,
+				"vote_percentage": 36.8,
+				"threshold_affect": false
+			},{
+				"party":"Lab",
+				"seats_without_threshold":232,
+				"seats_with_threshold":281,
+				"vote_percentage": 30.4,
+				"threshold_affect": false
+			},{
+				"party":"UKIP",
+				"seats_without_threshold":1,
+				"seats_with_threshold":10,
+				"vote_percentage": 12.6,
+				"threshold_affect": false
+			},{
+				"party":"LD",
+				"seats_without_threshold":8,
+				"seats_with_threshold":0,
+				"vote_percentage": 7.9,
+				"threshold_affect": true
+			},{
+				"party":"SNP",
+				"seats_without_threshold":56,
+				"seats_with_threshold":0,
+				"vote_percentage": 4.7,
+				"threshold_affect": true
+			},{
+				"party":"Green",
+				"seats_without_threshold":1,
+				"seats_with_threshold":0,
+				"vote_percentage": 3.8,
+				"threshold_affect": true
+			},{
+				"party":"Rest",
+				"seats_without_threshold":22,
+				"seats_with_threshold":0,
+				"vote_percentage": "~0.74",
+				"threshold_affect": true
+			},
+		]
+	},{
+		"name"			: "German elections 2013",
+		"id"			: "germany2013",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 631,
+			"max_seats"		: 450,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 315
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"CDU/CSU",
+				"seats_without_threshold":311,
+				"seats_with_threshold":387,
+				"vote_percentage": 41.5,
+				"threshold_affect": false
+			},{
+				"party":"SPD",
+				"seats_without_threshold":193,
+				"seats_with_threshold":239,
+				"vote_percentage": 25.7,
+				"threshold_affect": false
+			},{
+				"party":"Left",
+				"seats_without_threshold":64,
+				"seats_with_threshold":4,
+				"vote_percentage": 8.6,
+				"threshold_affect": true
+			},{
+				"party":"Green",
+				"seats_without_threshold":63,
+				"seats_with_threshold":1,
+				"vote_percentage": 8.4,
+				"threshold_affect": true
+			},{
+				"party":"Rest",
+				"seats_without_threshold":0,
+				"seats_with_threshold":0,
+				"vote_percentage": 1.12,
+				"threshold_affect": true
+			}
+		]
+	},{
+		"name"			: "Australian elections 2013",
+		"id"			: "australia2013",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 150,
+			"max_seats"		: 150,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 76
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"Coalition",
+				"seats_without_threshold":90,
+				"seats_with_threshold":92,
+				"vote_percentage": 41.5,
+				"threshold_affect": false
+			},{
+				"party":"Labor",
+				"seats_without_threshold":55,
+				"seats_with_threshold":56,
+				"vote_percentage": 25.7,
+				"threshold_affect": false
+			},{
+				"party":"Ind",
+				"seats_without_threshold":2,
+				"seats_with_threshold":2,
+				"vote_percentage": 1.12,
+				"threshold_affect": false
+			},{
+				"party":"The Greens",
+				"seats_without_threshold":1,
+				"seats_with_threshold":0,
+				"vote_percentage": 8.6,
+				"threshold_affect": true
+			},{
+				"party":"PUP",
+				"seats_without_threshold":1,
+				"seats_with_threshold":0,
+				"vote_percentage": 8.4,
+				"threshold_affect": true
+			},{
+				"party":"KAP",
+				"seats_without_threshold":1,
+				"seats_with_threshold":0,
+				"vote_percentage": 1.12,
+				"threshold_affect": true
+			}
+		]
+	},{
+		"name"			: "Current polls with HDP more than 10%",
+		"id"			: "hdpmorethan10",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 550,
+			"max_seats"		: 450,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 276
+				},
+				{
+					"title": "referendum",
+					"seats": 330
+				},{
+					"title": "constitution",
+					"seats": 367
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"AKP",
+				"seats_without_threshold":262,
+				"seats_with_threshold":262,
+				"vote_percentage": 40,
+				"threshold_affect": false
+			},{
+				"party":"CHP",
+				"seats_without_threshold":143,
+				"seats_with_threshold":143,
+				"vote_percentage": 28,
+				"threshold_affect": false
+			},{
+				"party":"MHP",
+				"seats_without_threshold":86,
+				"seats_with_threshold":86,
+				"vote_percentage": 17,
+				"threshold_affect": false
+			},{
+				"party":"HDP",
+				"seats_without_threshold":59,
+				"seats_with_threshold":59,
+				"vote_percentage": 11,
+				"threshold_affect": false
+			},{
+				"party":"Others",
+				"seats_without_threshold":5,
+				"seats_with_threshold":0,
+				"vote_percentage": 5,
+				"threshold_affect": true
+			}
+		]
+	},{
+		"name"			: "Current polls with HDP less than 10%",
+		"id"			: "hdplessthan10",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 550,
+			"max_seats"		: 450,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 276
+				},
+				{
+					"title": "referendum",
+					"seats": 330
+				},{
+					"title": "constitution",
+					"seats": 367
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"AKP",
+				"seats_without_threshold":313,
+				"seats_with_threshold":313,
+				"vote_percentage": 42,
+				"threshold_affect": false
+			},{
+				"party":"CHP",
+				"seats_without_threshold":151,
+				"seats_with_threshold":151,
+				"vote_percentage": 28,
+				"threshold_affect": false
+			},{
+				"party":"MHP",
+				"seats_without_threshold":86,
+				"seats_with_threshold":86,
+				"vote_percentage": 17,
+				"threshold_affect": false
+			},{
+				"party":"HDP",
+				"seats_without_threshold":59,
+				"seats_with_threshold":0,
+				"vote_percentage": 9,
+				"threshold_affect": true
+			},{
+				"party":"Others",
+				"seats_without_threshold":5,
+				"seats_with_threshold":0,
+				"vote_percentage": 5,
+				"threshold_affect": true
+			}
+		]
+	}
+]

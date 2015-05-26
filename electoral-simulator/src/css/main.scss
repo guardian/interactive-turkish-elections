@@ -1,0 +1,272 @@
+/**
+ * Project: Project name 
+ * File:    Main SCSS
+ */
+
+$guss-webfonts-base-url: '//pasteup.guim.co.uk/fonts/';
+
+@import 'bower_components/pasteup-palette/src/_palette';
+@import 'bower_components/guss-webfonts/src/_webfonts.scss';
+@import 'bower_components/guss-typography/_typography.scss';
+
+@import 'modules/sample';
+@include guss-webfonts();
+@include guss-typography-defaults;
+body{
+    margin:0;
+}
+figure{
+	margin:0;
+	padding:0;
+}
+#guInteractive {
+    font-family:Arial;
+    font-family:'Guardian Egyptian Web';
+    -webkit-font-smoothing: antialiased;
+    max-width:620px;
+    color:#333;
+    h1{
+    	line-height:1em;
+    	font-size:20px;
+        padding-top: 0.8em;
+        border-bottom: 1px solid #dcdcdc;
+        border-top: 1px solid #dcdcdc;
+        padding-bottom: 0.8em;
+        margin-bottom: 0.2em;
+    }
+    #electionInfo{
+    	margin-top:20px;
+    	color:#555;
+    	font-family:'Guardian Text Sans Web';
+    		
+    	h2{
+    		font-size:14px;
+    		margin-bottom:0;
+    	}
+    	p{
+    		font-size:14px;
+    		margin-top:0;
+            font-family:'Guardian Text Egyptian Web';
+    	}
+        .thresholdSwitch{
+            background:#fff;
+            border-radius:50px;
+            border: 1px solid #dcdcdc;
+            height:23px;
+            padding:0 9px;
+            font-family:'Guardian Text Sans Web';
+            outline:none;
+            cursor:pointer;
+            font-size:11px;
+            &.threshold-is-true{
+                background:#4BC6DF;
+                border-color:#4BC6DF;
+            }
+        }
+    }
+    
+    #buttonContainer{
+    	font-size:0;
+    	padding-top:10px;
+    	p{
+    		font-size:16px;
+    		font-weight:bold;
+    		margin-top:0;
+    		line-height: 1em;
+    		margin-bottom:20px;
+    	}
+    	button{
+    		border:none;
+    		background:#fff;
+    		border:1px solid #C9C9C9;
+    		border-radius:20px;
+    		height:30px;
+    		font-family:'Guardian Text Sans Web';
+    		transition:background-color 0.5s;
+    		outline:none;
+    		cursor:pointer;
+    		padding:0 10px;
+    		margin:0 5px 5px 0;
+    		display:inline-block;
+    		font-size:12px;
+    		&:hover{
+    			background:#ccc;
+    		}
+    		&.active{
+    			color:#fff;
+    			background-color:#4BC6DF;
+    			border:none;
+    		}
+    	}
+    }
+    #electionContainer{
+    	
+    }
+    #vizContent{
+    	margin-top:15px;
+    	font-family:'Guardian Text Sans Web';
+    }
+    #yAxis{
+    	width:50px;
+    	height:auto;
+    	float:left;
+    	padding-top:20px;
+    	.yLabel{
+    		height:30px;
+    		margin-top:7px;
+    		color:#4BC6DF;
+    		padding-top:5px;
+    		box-sizing:border-box;
+    		p{
+    			margin:0;
+    			line-height:1em;
+    			font-size:11px;
+    			font-weight:bold;
+    			span{
+    				font-weight:normal;
+    				display: block;
+    			}
+    		}
+    		&:first-child{
+    			margin-top:0;
+    		}
+    	}
+    }
+    .bar{
+    	fill:#4BC6DF;
+    }
+    .thresholdLabel{
+    	display: none;
+    }
+
+    .threshold-visible{
+    	#yAxis .yLabel.belowThreshold{
+			color: #999;
+			// margin-top:14px;
+			// & ~ .belowThreshold{
+			// 	margin-top:7px;
+			// }
+		}
+		.bar.belowThreshold{
+			fill:#A4E6F3;
+		}
+		.thresholdline{
+			// stroke:#E5E5E5;
+			stroke-width:1;
+		}
+		.thresholdLabel{
+			display:block;
+			position: absolute;
+			line-height:1.2em;
+			font-size:11px;
+			color:#AEAEAE;
+			width:47%;
+			right:0;
+			margin:0;
+            max-width:140px;
+		}
+    }
+    .seat_label{
+    	font-size:11px;
+    }
+
+    #vizWrapper{
+    	margin-left:56px;
+    	// border-left:1px solid #E5E5E5;
+    	line-height:0;
+    	position: relative;
+    	svg{
+    		line-height:1em;
+    	}
+    }
+    @media(min-width:480px){
+    	#yAxis{
+    		width:72px;
+    		.yLabel{
+                padding-top:3px;
+                p{
+    			 font-size:13px;
+    		    }
+            }
+    	}
+    	#vizWrapper{
+    		margin-left:78px;
+    	}
+    }
+
+
+
+
+    #profileContainer{ 
+        &:after{
+            content:'';
+            display:block;
+            clear:both;
+        } 
+        padding-top:0;
+        h1{
+            margin-top:0;
+        }
+        #photoContainer{
+            float:left;
+            position: relative;
+        }
+        #leaderPhoto{
+            width:50px;
+            height:50px;
+            background-size:cover;
+            background-position:center;
+            border-radius:180px;
+        }
+        #partyPhoto{
+            margin:10px auto 0;
+            display: block;
+            width:30px;
+            position: absolute;
+            right:-10px;
+            bottom:-10px;
+        }
+        
+        h1{
+            margin-top:0;
+            font-size:20px;
+            margin-bottom:0.3em;
+            span{
+                font-weight: normal;
+            }
+        }
+        ul{
+            padding:0;
+            margin:0 0 0 20px;
+            float:left;
+            li{
+                padding:0;
+                margin:0;
+                font-family:'Guardian Text Sans Web';
+                color:#767676;
+                list-style: none;
+            }
+            &:after{
+                clear:both;
+                display:block;
+                content:'';
+            }
+        }
+        p{
+            clear:both;
+            float:left;
+            font-family:'Guardian Text Egyptian Web';
+        }
+
+        @media(min-width:420px){
+            #photoContainer{
+                width:70px;
+            }
+            #leaderPhoto{
+                width:70px;
+                height:70px;
+            }
+        }
+    }
+}
+
