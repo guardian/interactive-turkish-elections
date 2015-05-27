@@ -32,10 +32,13 @@ define([
     var verticalLine;
     var output;
     var oldaffectLength;
+    var electionId = 0;
 
     function init(el, context, config, mediator) { 
         output = el;
         var hashValue = window.location.hash;
+
+        // For now, I'm only using "Simulator"
         if(hashValue){
             hashValue = hashValue.replace('#','')
             if(hashValue === "simulator"){
@@ -64,11 +67,13 @@ define([
         var isInit = true;
         var thresholdInit = true;
         var templateFile;
+        
         if(template === "simulator"){
             templateFile = templateHTML
         }else{
             templateFile = hdpTemplate
         }
+
         app = new Ractive({
             el:output,
             template:templateFile,
@@ -87,6 +92,30 @@ define([
 
         app.on('switchDataset',function(e,id){
             app.set('currentElection',id);
+        })  
+
+        app.on('switchThreshold',function(e,id){
+            app.set('threshold',!app.get('threshold'));
+        })
+
+        app.on('clickStepper',function(e,step){
+            var elections = ["turkey2002","turkey2011","uk2015","germany2013","australia2013"];
+            var currentElectionId = app.get('currentElection');
+            var electionIndex = elections.indexOf(currentElectionId);
+            if(step==="next"){
+                if(electionIndex === 4){
+                    app.set('currentElection',elections[0])
+                }else{
+                    app.set('currentElection',elections[electionIndex+1])
+                }
+            }else if(step==="back"){
+                if(electionIndex === 0){
+                    app.set('currentElection',elections[4])
+                }else{
+                    app.set('currentElection',elections[electionIndex-1])
+                }
+            }
+            
         })
 
         app.observe('currentElection',function(){
@@ -98,10 +127,6 @@ define([
                 drawRectangles(true);
             }
             isInit = false;
-        })  
-
-        app.on('switchThreshold',function(e,id){
-            app.set('threshold',!app.get('threshold'));
         })
 
         app.observe('threshold',function(){
@@ -110,9 +135,9 @@ define([
             }
             thresholdInit = false;
         })  
+
         window.onresize = function(){
             var newWidth = d3.select(vizContainer).style('width');
-            console.log(newWidth,width)
             if(newWidth !== width){
                 throttledInit();
             }
@@ -259,14 +284,14 @@ define([
                         return 'translate(' + (parseFloat(xScale(d.seats_without_threshold)) + 5) +',0)';
                     }else{
                         if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
-                            return 'translate(' + (parseInt(width)-80) +',0)';
+                            return 'translate(' + 5 +',0)';
                         }else{
                             return 'translate(' + (parseFloat(xScale(d.seats_with_threshold)) + 5) +',0)';
                         } 
                     }
                 }else{
                     if(parseFloat(xScale(d.seats_without_threshold)) + 80 > parseInt(width)){
-                        return 'translate(' + (parseInt(width)-80) +',0)';
+                        return 'translate(' + 5 +',0)';
                     }else{
                         return 'translate(' + (parseFloat(xScale(d.seats_without_threshold)) + 5) +',0)';
                     } 
@@ -282,14 +307,14 @@ define([
                         return 'translate(' + (parseFloat(xScale(d.seats_without_threshold)) + 5) +',0)';
                     }else{
                         if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
-                            return 'translate(' + (parseInt(width)-80) +',0)';
+                            return 'translate(' + 5 +',0)';
                         }else{
                             return 'translate(' + (parseFloat(xScale(d.seats_with_threshold)) + 5) +',0)';
                         } 
                     }
                 }else{
                     if(parseFloat(xScale(d.seats_without_threshold)) + 80 > parseInt(width)){
-                        return 'translate(' + (parseInt(width)-80) +',0)';
+                        return 'translate(' + 5 +',0)';
                     }else{
                         return 'translate(' + (parseFloat(xScale(d.seats_without_threshold)) + 5) +',0)';
                     } 
@@ -298,35 +323,28 @@ define([
 
         seatLabel.text('');
 
-        seatLabel.append('rect').attr({
-            x: -0.5,
-            y: 4,
-            width: 50,
-            height: 21.5
-        })
-        .attr('fill',function(d){
-            if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
-                return "rgba(255,255,255,0.9)"
-            }else{
-                return "transparent"
-            }
-        })
-
         var seatLabelText = seatLabel.append('text')
 
         var seatLabelTextWithout = seatLabelText
             .append('tspan')
-            .text(function(d){
+            .text(function(d,i){
+                var seatsText; 
+                if(d.seats_without_threshold === 1){
+                    seatsText = "seat"
+                }else{
+                    seatsText = "seats"
+                }
                 if(d.threshold_affect){
                     var difference = d.seats_with_threshold - d.seats_without_threshold;
                     if(app.get('threshold')){
-                        return Math.abs(difference) + " forfeited seats"
+                        return Math.abs(difference) + " forfeited " + seatsText
                     }else{
-                        return d.seats_without_threshold + " seats won"
+                        return d.seats_without_threshold + " " + seatsText + " won"
                     }
-                    
                 }else{
-                    return d.seats_without_threshold + " seats won"
+                    return d.seats_without_threshold + " " + seatsText + " won"
+
+                    
                 }
             })
             .attr('y',function(d){
@@ -347,10 +365,23 @@ define([
                         return "#999"
                     }else{
                         return "#4BC6DF"
+                    }   
+                }else{
+                    if(app.get('threshold')){
+                        if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
+                            return "#FFF"
+                        }else{
+                            return "#4BC6DF"
+                        }
+                    }else{
+                        if(parseFloat(xScale(d.seats_without_threshold)) + 80 > parseInt(width)){
+                            return "#FFF"
+                        }else{
+                            return "#4BC6DF"
+                        }
                     }
                     
-                }else{
-                    return "#4BC6DF"
+  
                 }
             })
 
@@ -360,13 +391,25 @@ define([
             .text(function(d){
                 if(!d.threshold_affect){
                     var difference = d.seats_with_threshold - d.seats_without_threshold;
-                    return "+" + difference + " bonus seats"
+                    var seatsText; 
+                    if(difference === 1){
+                        seatsText = "seat"
+                    }else{
+                        seatsText = "seats"
+                    }
+                    return "+" + difference + " bonus " + seatsText
                 }
             })
             .attr({
-                'fill'  :'#95D0DD',
                 'x'     : 0,
                 'y'     : 25
+            })
+            .attr('fill',function(d){
+               if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
+                   return "rgba(255,255,255,0.8)"
+               }else{
+                   return "#95D0DD"
+               } 
             })
         }
         
@@ -472,7 +515,7 @@ define([
             })
 
         d3.select(vizContainer).append('p')
-            .html('Below this line are parties with less than 10% of votes')
+            .html('Parties with less than 10% of votes')
             .attr('class','thresholdLabel')
             .attr('style',function(){
                 return "top:" + (affectLength * (barHeight+barMargin)+marginTop) + "px"

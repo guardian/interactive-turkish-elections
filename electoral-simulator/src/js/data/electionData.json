@@ -161,7 +161,7 @@
 		"election_results":	[
 			{
 				"party":"Con",
-				"seats_without_threshold":330,
+				"seats_without_threshold":331,
 				"seats_with_threshold":359,
 				"vote_percentage": 36.8,
 				"threshold_affect": false
@@ -197,7 +197,7 @@
 				"threshold_affect": true
 			},{
 				"party":"Rest",
-				"seats_without_threshold":22,
+				"seats_without_threshold":21,
 				"seats_with_threshold":0,
 				"vote_percentage": "~0.74",
 				"threshold_affect": true
