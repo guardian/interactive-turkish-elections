@@ -269,145 +269,37 @@
 				"party":"Coalition",
 				"seats_without_threshold":90,
 				"seats_with_threshold":92,
-				"vote_percentage": 41.5,
+				"vote_percentage": 45.55,
 				"threshold_affect": false
 			},{
 				"party":"Labor",
 				"seats_without_threshold":55,
 				"seats_with_threshold":56,
-				"vote_percentage": 25.7,
+				"vote_percentage": 33.38,
 				"threshold_affect": false
 			},{
 				"party":"Ind",
 				"seats_without_threshold":2,
 				"seats_with_threshold":2,
-				"vote_percentage": 1.12,
+				"vote_percentage": 1.37,
 				"threshold_affect": false
 			},{
 				"party":"The Greens",
 				"seats_without_threshold":1,
 				"seats_with_threshold":0,
-				"vote_percentage": 8.6,
+				"vote_percentage": 8.65,
 				"threshold_affect": true
 			},{
 				"party":"PUP",
 				"seats_without_threshold":1,
 				"seats_with_threshold":0,
-				"vote_percentage": 8.4,
+				"vote_percentage": 5.49,
 				"threshold_affect": true
 			},{
 				"party":"KAP",
 				"seats_without_threshold":1,
 				"seats_with_threshold":0,
-				"vote_percentage": 1.12,
-				"threshold_affect": true
-			}
-		]
-	},{
-		"name"			: "Current polls with HDP more than 10%",
-		"id"			: "hdpmorethan10",
-		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
-		"milestones"	: {
-			"total_seats"	: 550,
-			"max_seats"		: 450,
-			"majorities"	: [
-				{
-					"title": "majority",
-					"seats": 276
-				},
-				{
-					"title": "referendum",
-					"seats": 330
-				},{
-					"title": "constitution",
-					"seats": 367
-				}
-			]
-		},
-		"election_results":	[
-			{
-				"party":"AKP",
-				"seats_without_threshold":262,
-				"seats_with_threshold":262,
-				"vote_percentage": 40,
-				"threshold_affect": false
-			},{
-				"party":"CHP",
-				"seats_without_threshold":143,
-				"seats_with_threshold":143,
-				"vote_percentage": 28,
-				"threshold_affect": false
-			},{
-				"party":"MHP",
-				"seats_without_threshold":86,
-				"seats_with_threshold":86,
-				"vote_percentage": 17,
-				"threshold_affect": false
-			},{
-				"party":"HDP",
-				"seats_without_threshold":59,
-				"seats_with_threshold":59,
-				"vote_percentage": 11,
-				"threshold_affect": false
-			},{
-				"party":"Others",
-				"seats_without_threshold":5,
-				"seats_with_threshold":0,
-				"vote_percentage": 5,
-				"threshold_affect": true
-			}
-		]
-	},{
-		"name"			: "Current polls with HDP less than 10%",
-		"id"			: "hdplessthan10",
-		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
-		"milestones"	: {
-			"total_seats"	: 550,
-			"max_seats"		: 450,
-			"majorities"	: [
-				{
-					"title": "majority",
-					"seats": 276
-				},
-				{
-					"title": "referendum",
-					"seats": 330
-				},{
-					"title": "constitution",
-					"seats": 367
-				}
-			]
-		},
-		"election_results":	[
-			{
-				"party":"AKP",
-				"seats_without_threshold":313,
-				"seats_with_threshold":313,
-				"vote_percentage": 42,
-				"threshold_affect": false
-			},{
-				"party":"CHP",
-				"seats_without_threshold":151,
-				"seats_with_threshold":151,
-				"vote_percentage": 28,
-				"threshold_affect": false
-			},{
-				"party":"MHP",
-				"seats_without_threshold":86,
-				"seats_with_threshold":86,
-				"vote_percentage": 17,
-				"threshold_affect": false
-			},{
-				"party":"HDP",
-				"seats_without_threshold":59,
-				"seats_with_threshold":0,
-				"vote_percentage": 9,
-				"threshold_affect": true
-			},{
-				"party":"Others",
-				"seats_without_threshold":5,
-				"seats_with_threshold":0,
-				"vote_percentage": 5,
+				"vote_percentage": 1.04,
 				"threshold_affect": true
 			}
 		]
