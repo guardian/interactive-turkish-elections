@@ -40,7 +40,7 @@
 				"vote_percentage": 13.01,
 				"threshold_affect": false
 			},{
-				"party":"IND*",
+				"party":"Ind",
 				"seats_without_threshold":35,
 				"seats_with_threshold":35,
 				"vote_percentage": 6.57,
@@ -101,7 +101,7 @@
 				"vote_percentage": 19.4,
 				"threshold_affect": false
 			},{
-				"party":"IND*",
+				"party":"Ind",
 				"seats_without_threshold":4,
 				"seats_with_threshold":9,
 				"vote_percentage": 0.99,
