@@ -68,27 +68,40 @@ figure{
             }
         }
     }
+
+    #introMobile{
+            display:block;
+        }
+
+    #introDesktop{
+            display:none;
+        }
     
+    .hilite {
+        color:#333;
+        transition: color 0.5s;
+    }
    
     .introduction{
         p{
             font-size:14px;
+            color:#BBB;
             font-family:'Guardian Text Egyptian Web';
             button{
                 border:none;
                 background:#fff;
                 border:1px solid #dcdcdc;
                 border-radius:20px;
-                height:26px;
+                height:20px;
                 font-family:'Guardian Text Sans Web';
                 transition:background-color 0.5s;
                 outline:none;
                 cursor:pointer;
-                padding:0 10px;
-                margin:2px 1px;
+                padding:0 8px;
+                margin:2px 2px;
                 display:inline-block;
                 font-size:12px;
-                box-shadow:0 1px 0 rgba(0,0,0,0.1);
+                color:#767676;
                 &:hover{
                     background:#ccc;
                 }
@@ -266,6 +279,12 @@ figure{
     @media(min-width:480px){
         .introduction p{
             font-size:16px;
+        }
+        #introMobile{
+            display:none;
+        }
+        #introDesktop{
+            display:block;
         }
     	#yAxis{
     		width:72px;
