@@ -5,7 +5,6 @@ define([
     'json!data/electionData.json',
     'json!data/profileData.json',
     'text!templates/appTemplate.html',
-    'text!templates/hdpTemplate.html',
     'text!templates/profileTemplate.html'
 ], function(
     d3,
@@ -14,7 +13,6 @@ define([
     electionData,
     profileData,
     templateHTML,
-    hdpTemplate,
     profileTemplate
 ) {
    'use strict';
@@ -43,8 +41,8 @@ define([
             hashValue = hashValue.replace('#','')
             if(hashValue === "simulator"){
                 simulatorInit('simulator');
-            }else if(hashValue === "hdp"){
-                simulatorInit('hdp');
+            }else if(hashValue === "simulator_simple"){
+                simulatorInit('simulator_simple');
             }else if(hashValue.split('_')[0] === "profile"){
                 profileInit(hashValue.split('_')[1]);
             }
@@ -52,6 +50,10 @@ define([
     }
 
     function profileInit(party){
+        var editProfileData = profileData.map(function(profile){
+            profile.description = profile.description.split("\n");
+            return profile;
+        })
         app = new Ractive({
             el:output,
             template:profileTemplate,
@@ -66,13 +68,7 @@ define([
         var data = electionData;
         var isInit = true;
         var thresholdInit = true;
-        var templateFile;
-        
-        if(template === "simulator"){
-            templateFile = templateHTML
-        }else{
-            templateFile = hdpTemplate
-        }
+        var templateFile = templateHTML;
 
         app = new Ractive({
             el:output,
@@ -83,6 +79,12 @@ define([
                 threshold:true
             }
         })
+
+        if(template==="simulator_simple"){
+            app.set('simple',true)
+        }else{
+            app.set('simple',false)
+        }
 
         vizContainer = app.find('#vizWrapper');
         

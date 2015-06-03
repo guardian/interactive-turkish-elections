@@ -3,18 +3,17 @@
 	{{#if id === currentParty}}
 		<div id="profileContainer">
 			<div id="infoContainer">
-				<h1>{{name}} <span>{{translation}}</span></h1>
+				<h1><span>{{translation}}</span> ({{name}})</h1>
 				<div id="photoContainer">
 					<div id="leaderPhoto" style="background-image:url(@@assetPath@@/imgs/{{id}}_leader.jpg)"></div>
 					<img src="@@assetPath@@/imgs/{{id}}_logo.png" id="partyPhoto"/>
 				</div>
 				
 				<ul>
-					<li>Leader: {{leader}}</li>
-					<li>Vote percentage 2011: {{seats}}</li>
-					<li>Projected vote percentage: {{polls}}</li>
-				</ul>
-				<p>{{description}}</p>
+					<li><span>Leader</span> {{leader}}</li>
+					<li><span>Percentage of vote won in 2011</span> {{seats}}</li>
+					<li><span>Predicted percentage of vote in 2015</span>  {{polls}}%</li>
+				</ul>	
 			</div>
 		</div>
 	{{/if}}

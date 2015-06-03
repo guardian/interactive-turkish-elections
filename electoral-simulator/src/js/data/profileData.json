@@ -3,33 +3,33 @@
 		"id"			: "akp",
 		"name"			: "AKP",
 		"translation"	: "Justice and Development Party",
-		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"description"	: "Founded by politicians of various existing conservative parties in 2001, the Islamic-conservative Justice and Development party (AKP) has ruled Turkey since it won in landslide elections in 2002. In the last national elections the party gathered 49.8% of all votes. The former foreign minister Ahmet Davutoğlu became party leader and prime minister after Recep Tayyip Erdoğan was elected as president of Turkey in a popular vote last year. He also stands as the party’s top candidate on 7 June, despite his often criticised and only thinly veiled support for the AKP, when as president he should be impartial.\nOne main target for the AKP is to win a two-thirds majority – or 367 seats in parliament – in order to change the current constitution and introduce an executive presidential system without a referendum. This seems to have become an unattainable goal. While it is pretty much certain that the AKP will emerge as the winner from the elections, recent polls suggest that they might lose up to 10 points – which would put a referendum, for which the party needs a three-fifths majority, or 330 seats, out of reach.\nThe AKP faces a number of serious challenges in this year’s elections. Internally the party is more divided than ever before. Furthermore, an important number of AKP voters show little support for the party’s executive presidency plans. Foreign policy troubles, a stalling economy and the government’s increasing authoritarianism might drive an important number of former AKP voters to cast their ballots for one of the opposition parties.",
 		"leader"		: "Ahmet Davutoğlu",
-		"seats"			: 300,
-		"polls"			: 280
+		"seats"			: "49.83%",
+		"polls"			: 41.4
 	},{	
 		"id"			: "chp",
 		"name"			: "CHP",
 		"translation"	: "Republican People's Party",
-		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"description"	: "Established by Mustafa Kemal Atatürk, the founder of the Turkish Republic, in 1923, the Republican People’s party (CHP) is the oldest party and represents the main opposition. The party leader and its top candidate is Kemal Kiliçdaroglu. In the last parliamentary elections, the CHP was able to garner 25.98% of all votes.\nThe CHP’s election manifesto is centred on economic and labour issues: the party promises to introduce higher pensions, to tackle the current unemployment rate of 11.2%, and to improve employment among young people. It also promises to increase the minimum wage from 950 lira (£235) to 1,500 lira a month, whereas the work week is not to exceed 40 hours. The CHP supports the reform of the current constitution, introduced by the military junta after the 1980 military coup, but opposes the AKP’s plans of an executive presidency.\nThe CHP is the only party that organised primaries for the candidates standing in the 7 June elections and the election manifesto was written over a period of eight months and in cooperation with unions, trade chambers and other civil society groups. While the party has certainly changed under its current leader, many voters, especially Kurds and the religiously conservative, still distrust the CHP as a dogmatic and elitist party, making an election victory highly unlikely.", 
 		"leader"		: "Kemal Kılıçdaroğlu",
-		"seats"			: 300,
-		"polls"			: 280
+		"seats"			: "25.98%",
+		"polls"			: 26.32
 	},{	
 		"id"			: "hdp",
 		"name"			: "HDP",
 		"translation"	: "Peoples' Democratic Party",
-		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
-		"leader"		: "Selahattin Demirtaş",
-		"seats"			: 300,
-		"polls"			: 280
+		"description"	: "Often described as Turkey’s answer to Greece’s Syriza and the Spain’s Podemos, the pro-Kurdish Peoples’ Democratic party (HDP) arguably has the highest stakes in this year’s national elections. In order to enter parliament after 7 June, it will have to garner at least 10% of the national vote to get over the election threshold. Should it succeed, it will secure at least 50 seats, but if it fails all of these seats will go to the other parties and might hand the AKP a huge majority.\n Founded in 2012 and led by chairman Selahattin Demirtaş and chairwoman Figen Yüksekdag, this democratic-socialist party will stand the first time as a party. In 2011 the HDP’s MPs stood as independent candidates since Turkey’s election threshold of 10% only applies to political parties. It is the only political party in Turkey that has a 50% women’s quota.\n The HDP centres its election programme on minority rights, the rights of women and LGBTs and aspires to end ethnic, religious and gender discrimination. The party promises to drive forward the Kurdish peace process and to introduce mother-tongue education. It also plans to abolish obligatory (Sunni) religious lessons in schools in favour of electives that correspond with pupils’ religious beliefs. The HDP describes itself as an environmentalist and anti-capitalist party that opposes nuclear power and vows to improve workers’ rights. ", 
+		"leader"		: "Selahattin Demirtaş and Figen Yüksekdag",
+		"seats"			: "6.57% as independents",
+		"polls"			: 10.86
 	},{	
 		"id"			: "mhp",
 		"name"			: "MHP",
 		"translation"	: "Nationalist Movement Party",
-		"description"	: "The Justice and Development Party (Turkish: Adalet ve Kalkınma Partisi), abbreviated JDP in English and AK PARTİ or AKP in Turkish, is a social conservative political party in Turkey. It has developed from the tradition of Islamism, but has officially abandoned this ideology in favour of 'conservative democracy'.[12][13] The party is the largest in Turkey, with 312 members of parliament. Its leader, Ahmet Davutoğlu, is Prime Minister, while former party leader Recep Tayyip Erdoğan is President.",
+		"description"	: "The far-right Nationalist Movement party (MHP), informally known as the Grey Wolves, will likely retain its place as the third largest group in the Turkish parliament. In 2011, the party got 13.01% of all votes, and runs again under the leadership of Devlet Bahçeli.\n While the MHP supports a certain degree of Kurdish and minority rights – the party promises in its manifesto that Cemeviler, Alevi houses of worship, will receive state support – they are against the peace process between the government and the outlawed Kurdistan Workers’ party (PKK), arguing that the Kurds need to accept the authority of the Turkish state. They promise to end all ongoing negotiations should they come to power.\nTherefore the MHP draws their support mainly from a non-Kurdish base and is likely to generate MPs in all major Turkish cities. The MHP is expected to improve their vote count this year but has no traditional stronghold anywhere in the country. Polls suggest they will take votes both from the ruling AKP as well as from the main opposition CHP, from Turks who do not agree with the peace negotiations or who long for a return to more Turkish-nationalist government policies. Lately both Erdoğan and AKP candidates have criticised Kurdish politicians and the peace process in campaign speeches, well aware that the MHP might eat into their nationalist voter base.",
 		"leader"		: "Devlet Bahçeli",
-		"seats"			: 300,
-		"polls"			: 280
+		"seats"			: "13.01%",
+		"polls"			: 16.98
 	}
 ]

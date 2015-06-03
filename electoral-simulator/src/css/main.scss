@@ -24,17 +24,14 @@ figure{
     -webkit-font-smoothing: antialiased;
     max-width:620px;
     color:#333;
-    padding-bottom:30px;
-    border-bottom:1px solid #dcdcdc;
     #titleContainer{
         padding:16px 0;
-        border-bottom: 1px solid #dcdcdc;
         border-top: 1px solid #dcdcdc;
         margin-bottom:4px;
         position: relative;
 
         h1{
-            line-height:1em;
+            line-height:1.1em;
             font-size:20px;
             margin:0;
         }
@@ -185,7 +182,8 @@ figure{
     	}
     }
     #electionContainer{
-    	
+        padding-bottom:30px;
+        border-bottom:1px solid #dcdcdc;
     }
     #vizContent{
     	margin-top:15px;
@@ -338,15 +336,17 @@ figure{
 
 
     #profileContainer{ 
+        margin-top:10px;
+        padding-bottom:16px;
         &:after{
             content:'';
             display:block;
             clear:both;
         } 
-        padding-top:0;
-        h1{
-            margin-top:0;
-        }
+        padding-top:7px;
+        border-top:1px solid #dcdcdc;
+        border-bottom:0;
+
         #photoContainer{
             float:left;
             position: relative;
@@ -363,28 +363,34 @@ figure{
             display: block;
             width:30px;
             position: absolute;
-            right:-10px;
-            bottom:-10px;
+            right:-12px;
+            bottom:-15px;
+            border: 1px solid #fff;
         }
         
         h1{
             margin-top:0;
+            margin-bottom:0.5em;
+            line-height: 1em;
             font-size:20px;
-            margin-bottom:0.3em;
+            font-weight:normal;
             span{
                 font-weight: normal;
             }
         }
         ul{
             padding:0;
-            margin:0 0 0 20px;
-            float:left;
+            margin:0 0 0 70px;
             li{
                 padding:0;
                 margin:0;
                 font-family:'Guardian Text Sans Web';
                 color:#767676;
                 list-style: none;
+                font-size:14px;
+                span{
+                    font-weight: bold;
+                }
             }
             &:after{
                 clear:both;
@@ -401,6 +407,9 @@ figure{
         @media(min-width:420px){
             #photoContainer{
                 width:70px;
+            }
+            ul{
+                margin:0 0 0 90px;
             }
             #leaderPhoto{
                 width:70px;

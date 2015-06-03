@@ -133,6 +133,12 @@ module.exports = function(grunt) {
               dest: 'build/'
           },
           {
+              cwd: 'src/',
+              src: ['imgs/**/*.*'],
+              expand: true,
+              dest: 'build/assets/'
+          },
+          {
               src: 'bower_components/curl/dist/curl/curl.js',
               dest: 'build/assets/js/curl.js'
           }
