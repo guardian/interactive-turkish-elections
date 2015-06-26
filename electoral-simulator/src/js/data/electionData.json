@@ -65,8 +65,61 @@
 				"threshold_affect": true
 			},
 		]
-	},
-	{
+	},{
+		"name"			: "Turkish elections 2015",
+		"id"			: "turkey2015",
+		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
+		"milestones"	: {
+			"total_seats"	: 550,
+			"max_seats"		: 450,
+			"majorities"	: [
+				{
+					"title": "majority",
+					"seats": 276
+				},
+				{
+					"title": "referendum",
+					"seats": 330
+				},{
+					"title": "constitution",
+					"seats": 367
+				}
+			]
+		},
+		"election_results":	[
+			{
+				"party":"AKP",
+				"seats_without_threshold":258,
+				"seats_with_threshold":258,
+				"vote_percentage": 40.86,
+				"threshold_affect": false
+			},{
+				"party":"CHP",
+				"seats_without_threshold":132,
+				"seats_with_threshold":132,
+				"vote_percentage": 24.96,
+				"threshold_affect": false
+			},{
+				"party":"MHP",
+				"seats_without_threshold":80,
+				"seats_with_threshold":80,
+				"vote_percentage": 16.29,
+				"threshold_affect": false
+			},{
+				"party":"HDP",
+				"seats_without_threshold":80,
+				"seats_with_threshold":80,
+				"vote_percentage": 13.12,
+				"threshold_affect": false
+			},{
+				"party":"Others",
+				"seats_without_threshold":0,
+				"seats_with_threshold":0,
+				"vote_percentage": 4.77,
+				"threshold_affect": true
+			}
+		]
+	},{
 		"name"			: "Turkish elections 2002",
 		"id"			: "turkey2002",
 		"description"	: "Turkish parliament consists of 550 seats. A party needs 276 seats to form a government. With 330 seats a party can change constitution with a referendum. And by 367 seats they can without a referendum.",
@@ -101,7 +154,7 @@
 				"vote_percentage": 19.4,
 				"threshold_affect": false
 			},{
-				"party":"Ind",
+				"party":"Ind ",
 				"seats_without_threshold":4,
 				"seats_with_threshold":9,
 				"vote_percentage": 0.99,
@@ -278,7 +331,7 @@
 				"vote_percentage": 33.38,
 				"threshold_affect": false
 			},{
-				"party":"Ind",
+				"party":"Ind ",
 				"seats_without_threshold":2,
 				"seats_with_threshold":2,
 				"vote_percentage": 1.37,

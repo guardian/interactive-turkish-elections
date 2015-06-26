@@ -190,19 +190,23 @@ figure{
     	font-family:'Guardian Text Sans Web';
         position: relative;
     }
+    .footnote{
+        font-size:12px;
+        color:#999;
+    }
     #yAxis{
     	width:50px;
     	height:auto;
     	float:left;
     	padding-top:20px;
     	.yLabel{
-    		height:30px;
+    		height:40px;
     		margin-top:7px;
     		color:#4BC6DF;
     		padding-top:5px;
     		box-sizing:border-box;
     		p{
-    			margin:0;
+    			margin:5px 0 0 0;
     			line-height:1em;
     			font-size:11px;
     			font-weight:bold;
@@ -214,7 +218,29 @@ figure{
     		&:first-child{
     			margin-top:0;
     		}
+            &.CHP{
+                color:#ff0309;
+            }
+            &.MHP{
+                color:#2b72a8;
+            }
+            &.AKP{
+                color:#ff9901;
+            }
+            &.HDP{
+                color:#8352b7;
+            }
+            &.belowThreshold{
+                p{
+                    color: #999;
+                }
+            }
     	}
+        &.turkey2011, &.turkey2015{
+            .yLabel.Ind{
+                color:#8352b7;
+            }
+        }
     }
     .bar{
     	fill:#4BC6DF;

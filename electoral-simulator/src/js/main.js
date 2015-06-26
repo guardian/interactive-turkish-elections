@@ -32,6 +32,29 @@ define([
     var oldaffectLength;
     var electionId = 0;
 
+    var colors = {
+        "AKP" : {
+            "fill": "#ff9901",
+            "shade": "#ffb24d"
+        },
+        "CHP" : {
+            "fill": "#ff0309",
+            "shade": "rgb(255, 108, 119)"
+        },
+        "MHP" : {
+            "fill": "#2b72a8",
+            "shade": "#4d88ad"
+        },
+        "HDP" : {
+            "fill": "#8352b7",
+            "shade": "#916bc1"
+        },
+        "Ind" : {
+            "fill": "#8352b7",
+            "shade": "#916bc1"
+        },
+    }
+
     function init(el, context, config, mediator) { 
         output = el;
         var hashValue = window.location.hash;
@@ -70,6 +93,7 @@ define([
         var thresholdInit = true;
         var templateFile = templateHTML;
 
+        Ractive.DEBUG = false;
         app = new Ractive({
             el:output,
             template:templateFile,
@@ -101,7 +125,7 @@ define([
         })
 
         app.on('clickStepper',function(e,step){
-            var elections = ["turkey2002","turkey2011","uk2015","germany2013","australia2013"];
+            var elections = ["turkey2002","turkey2011","turkey2015","uk2015","germany2013","australia2013"];
             var currentElectionId = app.get('currentElection');
             var electionIndex = elections.indexOf(currentElectionId);
             if(step==="next"){
@@ -151,7 +175,7 @@ define([
     
 
     function vizInit(){
-        barHeight = 30;
+        barHeight = 40;
         barMargin = 7;
         width = d3.select(vizContainer).style('width');
 
@@ -209,11 +233,14 @@ define([
         withoutThresholdBar
             .attr('height',barHeight)
             .attr('fill',function(d){
-                if(!app.get('threshold')){
-                    return '#4BC6DF'
+                if(!d.threshold_affect){
+                   if(colors[d.party]){
+                       return colors[d.party].fill
+                   }else{
+                       return '#4BC6DF'
+                   } 
                 }else{
-                    return '#4BC6DF'
-
+                    return '#CCC'
                 }
             })
             .transition()
@@ -238,18 +265,26 @@ define([
             
         withThresholdBar
             .attr('fill',function(d){
-                if(d.threshold_affect){
-                     return '#fff'
+                if(!d.threshold_affect){
+                    if(colors[d.party]){
+                        return colors[d.party].shade
+                    }else{
+                        return "rgb(149, 208, 221)"
+                    }
                 }else{
-                     return '#A4E6F3' 
+                    return "#fff"
                 }
             })
             .attr('stroke',function(d){
-                if(d.threshold_affect){
-                     return '#CCC'
+                if(!d.threshold_affect){
+                    if(colors[d.party]){
+                        return colors[d.party].fill
+                    }else{
+                        return "#4BC6DF"
+                    }
                 }else{
-                     return '#4BC6DF' 
-                }
+                    return "#ccc"
+                }   
             })
             .transition()
             .duration(transitionSpeed)
@@ -351,35 +386,39 @@ define([
             })
             .attr('y',function(d){
                 if(d.threshold_affect){
-                    return 20
+                    return 24
                 }else{
                     if(app.get('threshold')){
-                        return 13
+                        return 18
                     }else{
-                        return 20
+                        return 24
                     }
                     
                 }
             })
             .attr('fill',function(d){
                 if(d.threshold_affect){
-                    if(app.get('threshold')){
-                        return "#999"
-                    }else{
-                        return "#4BC6DF"
-                    }   
+                    return "#999" 
                 }else{
                     if(app.get('threshold')){
                         if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
                             return "#FFF"
                         }else{
-                            return "#4BC6DF"
+                            if(colors[d.party]){
+                                return colors[d.party].fill
+                            }else{
+                                return "#4BC6DF"
+                            }   
                         }
                     }else{
                         if(parseFloat(xScale(d.seats_without_threshold)) + 80 > parseInt(width)){
                             return "#FFF"
                         }else{
-                            return "#4BC6DF"
+                            if(colors[d.party]){
+                                return colors[d.party].fill
+                            }else{
+                                return "#4BC6DF"
+                            } 
                         }
                     }
                     
@@ -404,13 +443,17 @@ define([
             })
             .attr({
                 'x'     : 0,
-                'y'     : 25
+                'y'     : 30
             })
             .attr('fill',function(d){
                if(parseFloat(xScale(d.seats_with_threshold)) + 80 > parseInt(width)){
                    return "rgba(255,255,255,0.8)"
                }else{
-                   return "#95D0DD"
+                   if(colors[d.party]){
+                        return colors[d.party].shade
+                    }else{
+                        return "#95D0DD"
+                    } 
                } 
             })
         }
