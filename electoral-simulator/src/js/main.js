@@ -129,14 +129,14 @@ define([
             var currentElectionId = app.get('currentElection');
             var electionIndex = elections.indexOf(currentElectionId);
             if(step==="next"){
-                if(electionIndex === 4){
+                if(electionIndex === 5){
                     app.set('currentElection',elections[0])
                 }else{
                     app.set('currentElection',elections[electionIndex+1])
                 }
             }else if(step==="back"){
                 if(electionIndex === 0){
-                    app.set('currentElection',elections[4])
+                    app.set('currentElection',elections[5])
                 }else{
                     app.set('currentElection',elections[electionIndex-1])
                 }
